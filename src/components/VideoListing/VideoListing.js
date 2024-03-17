@@ -1,6 +1,6 @@
 import React from "react";
 import "./VideoListing.css";
-import { useVideo } from "../../context/VideoContext";
+//import { useVideo } from "../../context/VideoContext";
 import {
   viewsFormatter,
   timeAgoFormatter,
@@ -10,19 +10,11 @@ import {
 //import { MoreOptionsModal } from "./MoreOptionsModal";
 import { MoreOptionsModal } from "../MoreOptionsModal/MoreOptionsModal";
 
-export const VideoListing = () => {
-  const {
-    state: { videos, loading, error },
-  } = useVideo();
+export const VideoListing = ({ videos }) => {
 
   return (
     <div className="videos-container">
-      {loading ? (
-        <p>Loading...</p>
-      ) : error ? (
-        <p>{error}</p>
-      ) : (
-        videos &&
+      {videos &&
         videos.map(video => {
           const {
             _id: videoId,
@@ -57,8 +49,7 @@ export const VideoListing = () => {
               </div>
             </div>
           );
-        })
-      )}
+        })}
     </div>
   );
 };
