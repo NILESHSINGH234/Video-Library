@@ -1,13 +1,15 @@
 import React from "react";
 import "./Trending.css";
-import { useVideo } from "../../context/VideoContext";
+//import { useVideo } from "../../context/VideoContext";
+import { useVideoContext } from "../../context/VideoContext";
 import { HorizontalCard } from "../../components";
 import { getTrendingVideos } from "../../helpers";
 
 export const TrendingList = () => {
   const {
     state: { videos, loading, error },
-  } = useVideo();
+ // } = useVideo();
+} = useVideoContext();
 
   const trendingVideos = getTrendingVideos(videos);
 
