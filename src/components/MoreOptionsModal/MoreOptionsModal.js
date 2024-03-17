@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import "./VideoListing.css";
+import "./MoreOptionsModal.css";
 import { RiShareForwardLine } from "react-icons/ri";
 
 export const MoreOptionsModal = () => {
