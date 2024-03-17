@@ -5,10 +5,12 @@ import {
   ADD_VIDEO_TO_HISTORY,
   DELETE_VIDEO_FROM_HISTORY,
   CLEAR_HISTORY,
+  LOADING,
 } from "../../reducers/actions";
 
 export const getHistoryService = async (token, dispatch) => {
   dispatch({ type: "LOADING" });
+  //dispatch({ type: LOADING });
   try {
     const { data, status } = await axios.get("/api/user/history", {
       headers: { authorization: token },
@@ -20,7 +22,6 @@ export const getHistoryService = async (token, dispatch) => {
     dispatch({ type: "ERROR", payload: error.response });
   }
 };
-
 export const addVideoToHistoryService = async (video, token, dispatch) => {
   try {
     const { data, status } = await axios.post(
@@ -37,7 +38,6 @@ export const addVideoToHistoryService = async (video, token, dispatch) => {
     dispatch({ type: "ERROR", payload: error.response });
   }
 };
-
 export const deleteVideoFromHistoryService = async (
   videoId,
   token,
@@ -64,7 +64,6 @@ export const deleteVideoFromHistoryService = async (
     dispatch({ type: "ERROR", payload: error.response });
   }
 };
-
 export const clearHistoryService = async (token, dispatch) => {
   const toastId = toast.loading("Deleting the history...");
   try {

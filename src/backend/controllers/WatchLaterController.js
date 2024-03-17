@@ -2,17 +2,16 @@ import { Response } from "miragejs";
 import { requiresAuth } from "../utils/authUtils";
 
 /**
- * All the routes related to Watch Later Videos are present here.
+ * All the routes related to Liked Videos are present here.
  * These are private routes.
  * Client needs to add "authorization" header with JWT token in it to access it.
- * */
+ **/
 
 /**
- * This handler handles getting videos from user's watchlater playlist.
- * send GET Request at /api/user/watchlater
- * */
-
-export const getWatchLaterVideosHandler = function (schema, request) {
+ * This handler handles getting videos from user's likes.
+ * send GET Request at /api/user/likes
+ **/
+export const getWatchLaterHandler = function (schema, request) {
   const user = requiresAuth.call(this, request);
   try {
     if (!user) {
@@ -37,21 +36,21 @@ export const getWatchLaterVideosHandler = function (schema, request) {
 };
 
 /**
- * This handler handles adding videos to user's watchlater playlist.
- * send POST Request at /api/user/watchlater
+ * This handler handles adding videos to user's likes.
+ * send POST Request at /api/user/likes
  * body contains {video}
  * */
 
-export const addItemToWatchLaterVideos = function (schema, request) {
+export const addItemToWatchLater = function (schema, request) {
   const user = requiresAuth.call(this, request);
   if (user) {
     const { video } = JSON.parse(request.requestBody);
-    if (user.watchlater.some((item) => item.id === video.id)) {
+    if (user.watchlater.some(item => item.id === video.id)) {
       return new Response(
         409,
         {},
         {
-          errors: ["The video is already in your watch later videos"],
+          errors: ["The video is already in your liked videos"],
         }
       );
     }
@@ -68,19 +67,19 @@ export const addItemToWatchLaterVideos = function (schema, request) {
 };
 
 /**
- * This handler handles removing videos from user's watchlater playlist.
- * send DELETE Request at /api/user/watchlater/:videoId
+ * This handler handles removing videos from user's likes.
+ * send DELETE Request at /api/user/likes/:videoId
  * */
 
-export const removeItemFromWatchLaterVideos = function (schema, request) {
+export const removeItemFromWatchLater = function (schema, request) {
   const user = requiresAuth.call(this, request);
   if (user) {
     const videoId = request.params.videoId;
-    const filteredVideos = user.watchlater.filter(
-      (item) => item._id !== videoId
+    const filteredWatchLater = user.watchlater.filter(
+      item => item._id !== videoId
     );
-    this.db.users.update({ watchlater: filteredVideos });
-    return new Response(200, {}, { watchlater: filteredVideos });
+    this.db.users.update({ watchlater: filteredWatchLater });
+    return new Response(200, {}, { watchlater: filteredWatchLater });
   }
   return new Response(
     404,
