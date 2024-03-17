@@ -1,26 +1,40 @@
 import { createContext, useContext, useReducer, useEffect } from "react";
 import axios from "axios";
 import { videoReducer } from "../reducers";
+import { useAuth } from "../context/AuthContext";
+import {
+  getLikedVideosService,
+ // getHistoryService,
+ /// getWatchLaterService,
+} from "../services";
 
 const initialState = {
   videos: [],
-  loading: false,
-  error: null,
+  history: [],
+  likedVideos: [],
+  watchLater: [],
+  notes: [],
   filters: {
     category: "All",
+    search: "",
   },
+  loading: false,
+  error: null,
 };
 
 const VideoContext = createContext(initialState);
 
 const VideoProvider = ({ children }) => {
   const [state, dispatch] = useReducer(videoReducer, initialState);
+  const {
+    state: { token },
+  } = useAuth();
 
   useEffect(() => {
     dispatch({ type: "LOADING" });
     (async () => {
       try {
-        const { data, status } = await axios.get("api/videos");
+        const { data, status } = await axios.get("/api/videos");
         if (status === 200) {
           dispatch({ type: "LOAD_ALL_VIDEOS", payload: data.videos });
         }
@@ -30,6 +44,12 @@ const VideoProvider = ({ children }) => {
     })();
   }, []);
 
+  useEffect(() => {
+    token && getLikedVideosService(token, dispatch);
+    //token && getHistoryService(token, dispatch);
+    //token && getWatchLaterService(token, dispatch);
+  }, [token]);
+
   return (
     <VideoContext.Provider value={{ state, dispatch }}>
       {children}
@@ -37,7 +57,6 @@ const VideoProvider = ({ children }) => {
   );
 };
 
-//const useVideo = () => useContext(VideoContext);
 const useVideoContext = () => useContext(VideoContext);
 
 export { VideoProvider, useVideoContext };

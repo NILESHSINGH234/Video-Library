@@ -1,5 +1,13 @@
 //import { LOAD_ALL_VIDEOS, LOADING, ERROR } from "./actions";
-import { LOAD_ALL_VIDEOS, LOADING, ERROR, FILTER_BY_CATEGORY } from "./actions";
+import {
+  LOAD_ALL_VIDEOS,
+  LOADING,
+  ERROR,
+  FILTER_BY_CATEGORY,
+  GET_LIKED_VIDEOS,
+  LIKE_VIDEO,
+  DISLIKE_VIDEO,
+} from "./actions";
 export const videoReducer = (state, { type, payload }) => {
   switch (type) {
     case LOADING:
@@ -10,6 +18,12 @@ export const videoReducer = (state, { type, payload }) => {
       return { ...state, loading: false, videos: payload };
       case FILTER_BY_CATEGORY:
         return { ...state, filters: { ...state.filters, category: payload } };
+        case GET_LIKED_VIDEOS:
+      return { ...state, loading: false, likedVideos: payload };
+    case LIKE_VIDEO:
+      return { ...state, likedVideos: payload };
+    case DISLIKE_VIDEO:
+      return { ...state, likedVideos: payload };
     default:
       return state;
   }

@@ -7,6 +7,7 @@ import {
   thumbnailGenerator,
   trimExtraChars,
 } from "../../utils";
+import { Link } from "react-router-dom";
 //import { MoreOptionsModal } from "./MoreOptionsModal";
 import { MoreOptionsModal } from "../MoreOptionsModal/MoreOptionsModal";
 
@@ -26,13 +27,13 @@ export const VideoListing = ({ videos }) => {
           } = video;
           return (
             <div className="video" key={videoId}>
-              <div className="thumbnail">
+                           <Link to={`/watch/${videoId}`} className="thumbnail">
                 <img
                   className="img-responsive"
                   src={thumbnailGenerator(videoId)}
                   alt={title}
                 />
-              </div>
+            </Link>
               <div className="video-details">
                 <div className="info-container">
                   <img className="avatar" src={avatar} alt={channelName} />
