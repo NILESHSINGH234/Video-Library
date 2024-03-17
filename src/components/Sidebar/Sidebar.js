@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 export const Sidebar = () => {
   return (
-    <div class="side-bar">
-      <div class="side-nav">
+    <div className="side-bar">
+      <div className="side-nav">
       <NavLink
           to="/"
           className={({ isActive }) =>
             isActive ? "side-nav-link active" : "side-nav-link"
           }
         >
-          <i class="material-icons">home</i>
+          <i className="material-icons">home</i>
           <span>Home</span>
 
           </NavLink>
@@ -22,7 +22,7 @@ export const Sidebar = () => {
             isActive ? "side-nav-link active" : "side-nav-link"
           }
         >
-          <i class="material-icons">local_fire_department</i>
+          <i className="material-icons">local_fire_department</i>
           <span>Trending</span>
           </NavLink>
         <hr />
@@ -32,7 +32,7 @@ export const Sidebar = () => {
             isActive ? "side-nav-link active" : "side-nav-link"
           }
         >
-          <i class="material-icons">history</i>
+          <i className="material-icons">history</i>
           <span>History</span>
 
           </NavLink>
@@ -42,7 +42,7 @@ export const Sidebar = () => {
             isActive ? "side-nav-link active" : "side-nav-link"
           }
         >
-          <i class="material-icons-outlined">thumb_up</i>
+          <i className="material-icons-outlined">thumb_up</i>
           <span>Liked Videos</span>
 
         </NavLink>
@@ -52,7 +52,7 @@ export const Sidebar = () => {
             isActive ? "side-nav-link active" : "side-nav-link"
           }
         >
-          <i class="material-icons-outlined">watch_later</i>
+          <i className="material-icons-outlined">watch_later</i>
           <span>Watch Later</span>
           </NavLink>
         <NavLink
@@ -61,7 +61,7 @@ export const Sidebar = () => {
             isActive ? "side-nav-link active" : "side-nav-link"
           }
         >
-          <i class="material-icons">playlist_play</i>
+          <i className="material-icons">playlist_play</i>
           <span>Playlist</span>
           </NavLink>
       </div>

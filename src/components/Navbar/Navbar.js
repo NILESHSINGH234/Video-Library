@@ -1,7 +1,8 @@
-import { Link,NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { IoPersonCircleSharp } from "react-icons/io5";
 import { useAuth } from "../../context/AuthContext";
+import { useLocation } from "react-router-dom";
 export const Navbar = () => {
 
     const {

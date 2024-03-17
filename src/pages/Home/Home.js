@@ -20,7 +20,7 @@ export const Home = () => {
   const filteredVideos = getFilteredVideos(videos, state);
   return (
     <NavSidebarContainer>
-      <div class="category-tags-container">
+      <div className="category-tags-container">
         {uniqueCategories?.map((uniqueCategory, id) => {
           return (
             <button
@@ -30,7 +30,7 @@ export const Home = () => {
                   payload: uniqueCategory,
                 })
               }
-              class={`category-tag ${
+              className={`category-tag ${
                 filters.category === uniqueCategory && "active"
               }`}
               key={id}
