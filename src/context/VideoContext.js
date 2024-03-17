@@ -4,12 +4,14 @@ import { videoReducer } from "../reducers";
 import { useAuth } from "../context/AuthContext";
 import {
   getLikedVideosService,
- // getHistoryService,
- /// getWatchLaterService,
+ getHistoryService,
+ getWatchLaterService,
 } from "../services";
+
 
 const initialState = {
   videos: [],
+  history: [],
   history: [],
   likedVideos: [],
   watchLater: [],
@@ -46,7 +48,7 @@ const VideoProvider = ({ children }) => {
 
   useEffect(() => {
     token && getLikedVideosService(token, dispatch);
-    //token && getHistoryService(token, dispatch);
+    token && getHistoryService(token, dispatch);
     //token && getWatchLaterService(token, dispatch);
   }, [token]);
 

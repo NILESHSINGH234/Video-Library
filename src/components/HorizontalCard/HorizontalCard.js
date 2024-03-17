@@ -40,7 +40,7 @@ export const HorizontalCard = ({ trendingVideo }) => {
             </p>
           </div>
         </div>
-        <MoreOptionsModal />
+        <MoreOptionsModal video={trendingVideo} videoId={videoId} />
       </div>
     </div>
   );
