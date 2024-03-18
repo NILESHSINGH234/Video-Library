@@ -13,6 +13,7 @@ const initialState = {
   videos: [],
   history: [],
   history: [],
+  search: "",
   likedVideos: [],
   watchLater: [],
   notes: [],
