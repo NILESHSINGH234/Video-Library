@@ -8,3 +8,4 @@ export { LikedVideos } from "./LikedVideos/LikedVideos";
 export { Playlist } from "./Playlist/Playlist";
 export { PlaylistDetail } from "./PlayListDetail/PlayListDetail";
 export { WatchLater } from "./WatchLater/WatechLater";
+export { Profile } from "./Profile/Profile";

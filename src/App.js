@@ -11,6 +11,7 @@ import { History } from "./pages/History/History";
 import { Playlist } from "./pages/Playlist/Playlist";
 import { PlaylistDetail } from "./pages/PlayListDetail/PlayListDetail";
 import { WatchLater } from "./pages";
+import { Profile } from "./pages";
 function App() {
   const {
     state: { isLoggedIn },
@@ -29,6 +30,7 @@ function App() {
         <Route path="/playlist" element={<Playlist />} />
         <Route path="/playlist/:playlistId"  element={<PlaylistDetail></PlaylistDetail>} />
         <Route path="/watch-later" element={<WatchLater />} />
+        <Route path="/profile" element={<Profile />} />
         {!isLoggedIn && <Route path="/signup" element={<Signup />} />}
         {!isLoggedIn && <Route path="/login" element={<Login />} />}
         <Route path="/mock" element={<Mockman />} />
