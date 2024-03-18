@@ -14,7 +14,7 @@ import { addVideoToHistoryService } from "../../services";
 import { useAuth } from "../../context/AuthContext";
 import { useVideoContext } from "../../context/VideoContext";
 import { ADD_VIDEO_TO_HISTORY } from "../../reducers/actions";
-import { deleteVideoFromHistoryService } from "../../services/history/historyService";
+import { deleteVideoFromHistoryService } from "../../services/history/historyService.js";
 
 export const VideoListing = ({ videos, playlistId }) => {
   const {

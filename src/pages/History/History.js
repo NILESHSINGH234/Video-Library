@@ -11,6 +11,7 @@ export const History = () => {
   const {
     state: { token, isLoggedIn },
   } = useAuth();
+
   return (
     <NavSidebarContainer>
       <div className="history-videos-list">
@@ -28,7 +29,15 @@ export const History = () => {
             {loading ? (
               <div className="loader-container">Loading...</div>
             ) : error ? (
-              <p>{error.status}</p>
+              error.status === 500 && (
+                <div className="user-message-container">
+                  <p>Unable to load data</p>
+                </div>
+              )
+            ) : history?.length === 0 ? (
+              <div className="user-message-container">
+                <p>No history available.</p>
+              </div>
             ) : (
               <VideoListing videos={history} />
             )}
@@ -44,4 +53,5 @@ export const History = () => {
         )}
       </div>
     </NavSidebarContainer>
-  );};
+  );
+};

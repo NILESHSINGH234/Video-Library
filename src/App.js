@@ -7,9 +7,10 @@ import { LikedVideos } from "./pages";
 import { useAuth } from "./context/AuthContext";
 import { VideoDetail } from "./pages";
 import { ToasterWrapper } from "./utils";
-import { History } from "./pages";
+import { History } from "./pages/History/History";
 import { Playlist } from "./pages/Playlist/Playlist";
 import { PlaylistDetail } from "./pages/PlayListDetail/PlayListDetail";
+import { WatchLater } from "./pages";
 function App() {
   const {
     state: { isLoggedIn },
@@ -22,11 +23,14 @@ function App() {
         <Route path="/trending" element={<Trending />} />
         <Route path="/watch/:videoId" element={<VideoDetail />} />
         <Route path="/liked-videos" element={<LikedVideos />} />
-        {!isLoggedIn && <Route path="/signup" element={<Signup />} />}
-        {!isLoggedIn && <Route path="/login" element={<Login />} />}
+       
+        
         <Route path="/history" element={<History />} />
         <Route path="/playlist" element={<Playlist />} />
         <Route path="/playlist/:playlistId"  element={<PlaylistDetail></PlaylistDetail>} />
+        <Route path="/watch-later" element={<WatchLater />} />
+        {!isLoggedIn && <Route path="/signup" element={<Signup />} />}
+        {!isLoggedIn && <Route path="/login" element={<Login />} />}
         <Route path="/mock" element={<Mockman />} />
         <Route path="*" element={<Navigate replace to="/" />} />
       </Routes>

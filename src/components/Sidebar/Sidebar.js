@@ -27,7 +27,7 @@ export const Sidebar = () => {
           </NavLink>
         <hr />
         <NavLink
-          to="/history"
+          to='/history'
           className={({ isActive }) =>
             isActive ? "side-nav-link active" : "side-nav-link"
           }
