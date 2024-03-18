@@ -34,6 +34,11 @@
     font-weight: 500;
   }
   
+  .trending-video .thumbnail .horizontal.img-responsive {
+    min-width: 135px;
+    min-height: 80px;
+  }
+  
   .trending-video .video-info span {
     text-decoration: none;
     color: var(--text-gray);
@@ -98,7 +103,7 @@
   
   @media only screen and (min-width: 1400px) {
     .trending-video {
-      width: 70%;
+      width: 80%;
     }
     .trending-video .video-info .video-description {
       font-size: 12px;
