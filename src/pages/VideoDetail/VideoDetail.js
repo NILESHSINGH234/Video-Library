@@ -5,7 +5,6 @@ import { PlaylistModal } from "../../components";
 import "./VideoDetail.css";
 import { useParams, useNavigate } from "react-router";
 import { VideoNotes } from "../../components";
-import { RiShareForwardLine } from "react-icons/ri";
 import { getVideoDetailsById } from "../../helpers";
 import { useVideoContext } from "../../context/VideoContext";
 import { useAuth } from "../../context/AuthContext";
@@ -107,10 +106,7 @@ export const VideoDetail = () => {
                       </>
                     )}
                   </button>
-                  {/*<button className="action-icon-btn">
-                    <RiShareForwardLine className="material-icons-outlined" />
-                    <span>Share</span>
-                    </button>*/}
+                 
                  
                   {token && videoExistInWatchLater ? (
                     <button
