@@ -28,9 +28,9 @@ export const Navbar = () => {
 
   const searchBtnHandler = () => {
     if (pathname === "/") {
-      dispatch({ type: "FILTER_BY_SEARCH", payload: searchQuery });
+      dispatch({ type: "FILTER_BY_CATEGORY", payload: "All" });
     } else {
-      dispatch({ type: "FILTER_BY_SEARCH", payload: searchQuery });
+      dispatch({ type: "FILTER_BY_CATEGORY", payload: "All" });
       navigate("/");
     }
   };

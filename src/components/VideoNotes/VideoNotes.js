@@ -14,6 +14,7 @@ export const VideoNotes = ({ notes, videoId }) => {
     state: { token,isLoggedIn },
   } = useAuth();
   const { dispatch } = useVideoContext();
+  const filteredNotes = notes.filter(note => note.videoId === videoId);
 
   return (
     <div className="">
@@ -41,19 +42,23 @@ export const VideoNotes = ({ notes, videoId }) => {
           <hr />
           <p className="text-normal">All Notes</p>
           <div className="video-notes-list">
-            {notes?.map(note => {
-              return (
-                <div className="video-note" key={note._id}>
-                  <p className="note-content">{note.content}</p>
-                  <IoClose
-                    className="delete-note-icon"
-                    onClick={() =>
-                      deleteNoteService(videoId, note._id, token, dispatch)
-                    }
-                  />
-                </div>
-              );
-            })}
+          {filteredNotes.length === 0 ? (
+              <div className="user-feedback">No note available.</div>
+            ) : (
+              filteredNotes?.map(note => {
+                return (
+                  <div className="video-note" key={note._id}>
+                    <p className="note-content">{note.content}</p>
+                    <IoClose
+                      className="delete-note-icon"
+                      onClick={() =>
+                        deleteNoteService(note._id, token, dispatch)
+                      }
+                    />
+                  </div>
+                );
+              })
+            )}
           </div>
         </>
       ) : (

@@ -25,26 +25,19 @@ export const VideoDetail = () => {
   } = useVideoContext();
 
   const {
-    state: { token },
+    state: { token, },
   } = useAuth();
 
   const {
     dispatch: watchLaterDispatch,
-    state: { watchLater },
+    state: { watchLater,notes },
   } = useVideoContext();
 
   const videoInfo = getVideoDetailsById(videos, videoId);
 
-  const {
-    _id,
-    title,
-    views,
-    uploadedOn,
-    avatar,
-    channelName,
-    description,
-    notes,
-  } = videoInfo || {};
+  const { _id, title, views, uploadedOn, avatar, channelName, description } =
+    videoInfo || {};
+
 
   const isVideoAlreadyLiked = likedVideos?.find(
     likedVideo => likedVideo._id === _id

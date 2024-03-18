@@ -18,7 +18,7 @@ import { deleteVideoFromHistoryService } from "../../services/history/historySer
 
 export const VideoListing = ({ videos, playlistId }) => {
   const {
-    state: { token },
+    state: { token,isLoggedIn },
   } = useAuth();
   const {
     state: { history },
@@ -26,15 +26,17 @@ export const VideoListing = ({ videos, playlistId }) => {
   } = useVideoContext();
 
   const historyHandler = (video, videoId) => {
-    let alreadyInHistory = history?.find(video => video._id === videoId);
-    if (alreadyInHistory) {
-      const filteredHistory = history.filter(video => video._id !== videoId);
-      dispatch({
-        type: ADD_VIDEO_TO_HISTORY,
-        payload: [...filteredHistory, { ...video }],
-      });
-    } else {
-      return addVideoToHistoryService(video, token, dispatch);
+    if (token !== "" && isLoggedIn) {
+      let alreadyInHistory = history?.find(video => video._id === videoId);
+      if (alreadyInHistory) {
+        const filteredHistory = history.filter(video => video._id !== videoId);
+        dispatch({
+          type: ADD_VIDEO_TO_HISTORY,
+          payload: [...filteredHistory, { ...video }],
+        });
+      } else {
+        return addVideoToHistoryService(video, token, dispatch);
+      }
     }
   };
 //export const VideoListing = ({ videos }) => {

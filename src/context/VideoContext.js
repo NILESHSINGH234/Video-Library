@@ -12,11 +12,11 @@ import {
 const initialState = {
   videos: [],
   history: [],
-  history: [],
+  notes: [],
   search: "",
   likedVideos: [],
   watchLater: [],
-  notes: [],
+  
   filters: {
     category: "All",
     search: "",

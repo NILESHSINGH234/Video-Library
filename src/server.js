@@ -67,7 +67,7 @@ export function makeServer({ environment = "development" } = {}) {
     seeds(server) {
       server.logging = false;
       videos.forEach(item => {
-        server.create("video", { ...item, notes: [] });
+        server.create("video", { ...item });
       });
       categories.forEach(item => server.create("category", { ...item }));
       users.forEach(item =>
@@ -99,9 +99,8 @@ export function makeServer({ environment = "development" } = {}) {
       this.get("/categories/:categoryId", getCategoryHandler.bind(this));
 
       // notes routes (private)
-      this.post("/video/:videoId", addItemToNotes.bind(this));
-      this.delete("/video/:videoId/:noteId", removeItemFromNotes.bind(this));
-
+      this.post("/user/notes/:videoId", addItemToNotes.bind(this));
+      this.delete("/user/notes/:noteId", removeItemFromNotes.bind(this));
       // likes routes (private)
       this.get("/user/likes", getLikedVideosHandler.bind(this));
       this.post("/user/likes", addItemToLikedVideos.bind(this));

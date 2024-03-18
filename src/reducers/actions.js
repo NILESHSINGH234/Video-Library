@@ -27,3 +27,4 @@ export const DELETE_VIDEO_FROM_WATCH_LATER = "DELETE_VIDEO_FROM_WATCH_LATER";
 export const FILTER_BY_SEARCH = "FILTER_BY_SEARCH";
 export const ADD_NOTE = "ADD_NOTE";
 export const DELETE_NOTE = "DELETE_NOTE";
+export const GET_NOTE = "GET_NOTE";
