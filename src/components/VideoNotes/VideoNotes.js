@@ -1,25 +1,25 @@
 import React, { useState } from "react";
 import { IoClose } from "react-icons/io5";
+import { Link } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { useVideoContext } from "../../context/VideoContext";
 import { addNoteService } from "../../services/notes/notesService";
 import { deleteNoteService } from "../../services/notes/notesService";
-import { Link } from "react-router-dom";
 import "./VideoNotes.css";
 
 export const VideoNotes = ({ notes, videoId }) => {
   const [noteContent, setNoteContent] = useState("");
 
   const {
-    state: { token,isLoggedIn },
+    state: { token, isLoggedIn },
   } = useAuth();
   const { dispatch } = useVideoContext();
+
   const filteredNotes = notes.filter(note => note.videoId === videoId);
 
   return (
     <div className="">
       <p className="text-normal">Take Notes</p>
-     
       {token && isLoggedIn ? (
         <>
           <textarea
@@ -42,7 +42,7 @@ export const VideoNotes = ({ notes, videoId }) => {
           <hr />
           <p className="text-normal">All Notes</p>
           <div className="video-notes-list">
-          {filteredNotes.length === 0 ? (
+            {filteredNotes.length === 0 ? (
               <div className="user-feedback">No note available.</div>
             ) : (
               filteredNotes?.map(note => {

@@ -1,63 +1,69 @@
 .note-text-area {
-    background-color: var(--bg-hover-blue);
-    border: none;
-    color: var(--gray-100);
-    height: 150px;
-    font-size: 14px;
-  }
-  
-  .note-text-area:focus {
-    outline: none;
-  }
-  
-  .add-note-btn {
-    background-color: var(--bg-hover-blue);
-    color: var(--gray-100);
-    font-size: 14px;
-  }
-  
-  .video-notes-list {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  
-  .video-note {
-    background-color: var(--bg-hover-blue);
-    color: var(--gray-100);
-    padding: 0.85rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    font-size: 1rem;
-  }
-  .user-message-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    padding: 2rem;
-    text-align: center;
-    color: var(--gray-500);
-  }
-  
-  .user-message-container p {
-    margin-top: 0.6rem;
-  }
-  
-  .user-message-container .btn {
-    margin-top: 3rem;
-    background-color: var(--blue-600);
-    padding: 0.5rem 1.5rem;
-  }
-  .note-content {
-    width: 95%;
-    font-size: 14px;
-  }
-  
-  .video-note .delete-note-icon {
-    cursor: pointer;
-  }
+  background-color: var(--bg-hover-blue);
+  border: none;
+  color: var(--gray-100);
+  height: 150px;
+  font-size: 14px;
+}
+
+.note-text-area:focus {
+  outline: none;
+}
+
+.add-note-btn {
+  background-color: var(--bg-hover-blue);
+  color: var(--gray-100);
+  font-size: 14px;
+}
+
+.user-feedback {
+  color: var(--gray-600);
+}
+
+.video-notes-list {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.video-note {
+  background-color: var(--bg-hover-blue);
+  color: var(--gray-100);
+  padding: 0.85rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.note-content {
+  width: 95%;
+  font-size: 14px;
+}
+
+.video-note .delete-note-icon {
+  cursor: pointer;
+}
+
+.user-message-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+  color: var(--gray-500);
+}
+
+.user-message-container p {
+  margin-top: 0.6rem;
+}
+
+.user-message-container .btn {
+  margin-top: 3rem;
+  background-color: var(--blue-600);
+  padding: 0.5rem 1.5rem;
+}

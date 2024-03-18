@@ -1,75 +1,76 @@
 export const videos = [
   {
-    _id: "No8qdcVYiQw",
-    title: "Getting started with HTML5",
-    channelName: "Tanay Pratap",
+    _id: "FxgM9k1rg0Q",
+    title: "Assignment for react course",
+    channelName: "Hitesh Choudhary",
     views: 40143,
-    uploadedOn: "Nov 22, 2020",
-    categoryName: "HTML",
+    uploadedOn: "Nov 22, 2022",
+    categoryName: "React Js",
     avatar:
-      "https://yt3.ggpht.com/ytc/AKedOLQnvobEXpzHCxB1g-q2aXbRDzSaznFVHo5OdFML=s48-c-k-c0x00ffffff-no-rj",
+      "https://i.ytimg.com/an_webp/dg2Gw1HSlpQ/mqdefault_6s.webp?du=3000&sqp=CIDl368G&rs=AOn4CLCz-JdGVwZpJCFUT4MPntyHnRA_7Q",
     description:
-      "Welcome to neogcamp's levelZero journey. You don't know anything about web development? Good, you have come to the right place. Not only you'll learn the language of the web: HTML, you'll learn how to make your site pretty with CSS. When we have learned everything we will put together a decent profile to host your Internet adventures.",
+      "Assignments for your react course",
   },
   {
-    _id: "jS4aFq5-91M",
-    title: "HTML Full Course - Build a Website Tutorial",
-    channelName: "freeCodeCamp.org",
+    _id: "eILUmCJhl64",
+    title: "React & Redux Complete Course (2024) with Projects | Notes | Free Certification",
+    channelName: "KG Coding by Prashant Sir",
     views: 5295078,
-    uploadedOn: "Sept 18, 2018",
-    categoryName: "HTML",
+    uploadedOn: "Sept 18, 2022",
+    categoryName: "React Js",
     avatar:
-      "https://yt3.ggpht.com/ytc/AKedOLRyPFojwY3CXV5ks5TwPrt2VifQn-nYNfkgLvVPkw=s48-c-k-c0x00ffffff-no-rj",
+      "https://i.ytimg.com/an_webp/eILUmCJhl64/mqdefault_6s.webp?du=3000&sqp=COTk368G&rs=AOn4CLDwwoyOVvZD7KUGnRRAzy5myaavBA",
     description:
-      "Learn the basics of HTML5 and web development in this awesome course for beginners. ",
+      "Full React js Tutorial course and with live project and the best part is it is one video not a full playlist",
   },
   {
-    _id: "1PnVor36_40",
-    title: "Learn CSS in 20 Minutes",
-    channelName: "Web Dev Simplified",
+    _id: "OpWjt_wbV4E",
+    title: "CSS Complete Course (2024) for Beginners | Myntra Project | Notes | GitHub | Certification",
+    channelName: "KG Coding by Prashant Sir",
     views: 808418,
-    uploadedOn: "Aug 23, 2018",
+    uploadedOn: "Aug 23, 2022",
     categoryName: "CSS",
     avatar:
-      "https://yt3.ggpht.com/ytc/AKedOLQpvSjzSCSo8ZKCjBZS7TRX7omb_kyQirh2zgEY=s48-c-k-c0x00ffffff-no-rj",
+      "https://i.ytimg.com/an_webp/OpWjt_wbV4E/mqdefault_6s.webp?du=3000&sqp=CI_p368G&rs=AOn4CLDLH8S7jA7HNzfwhrsJT0FOj3RGJw",
     description:
-      "In this video we will cover everything you need to know to get up and running with CSS in only 20 minutes. We will cover CSS syntax, how to add CSS to your HTML, CSS colors, CSS units, the box model, and best practices for CSS walking through a full example of CSS being used to style an HTML page. By the end of this video you will know enough about CSS to style any basic web pages in your own projects!",
+      "Full Css Tutorial course and with live project and the best part is it is one video not a full playlist",
   },
   {
-    _id: "PkZNo7MFNFg",
-    title: "Learn JavaScript - Full Course for Beginners",
-    channelName: "freeCodeCamp.org",
+    _id: "cpoXLj24BDY",
+    title: "JavaScript Complete Course (2024) 4 Projects | Notes | GitHub | Free Certification",
+    channelName: "KG Coding by Prashant Sir",
     views: 8848594,
-    uploadedOn: "Dec 10, 2018",
+    uploadedOn: "Dec 10, 2022",
     categoryName: "Javascript",
     avatar:
-      "https://yt3.ggpht.com/ytc/AKedOLRyPFojwY3CXV5ks5TwPrt2VifQn-nYNfkgLvVPkw=s48-c-k-c0x00ffffff-no-rj",
+      "https://i.ytimg.com/an_webp/cpoXLj24BDY/mqdefault_6s.webp?du=3000&sqp=CKzr368G&rs=AOn4CLBi5CuTwx4lyhYr8rvZNFUaQZzzQw",
     description:
-      "This complete 134-part JavaScript tutorial for beginners will teach you everything you need to know to get started with the JavaScript programming language.",
+      "Full Javascript Tutorial course and with live project and the best part is it is one video not a full playlist",
   },
   {
-    _id: "QCRpVw2KXf8",
+    _id: "htznIeWKgg8",
     title:
-      "SHORTEST JS Program 🔥window & this keyword | Namaste JavaScript Ep. 5",
-    channelName: "Akshay Saini",
+      "JavaScript Crash Course: Master the Basics in One Video! Ignite Your Front-End Mastery Series!",
+    channelName: "Sheryians Coding Schoo",
     views: 136615,
-    uploadedOn: "Oct 23, 2020",
+    uploadedOn: "Oct 23, 2022",
     categoryName: "Javascript",
     avatar:
-      "https://yt3.ggpht.com/ytc/AKedOLR8gqN3fHHNYbehMcsJ49rapBPhJMGPYSrl6YQyNg=s48-c-k-c0x00ffffff-no-rj",
+      "https://i.ytimg.com/an_webp/EgDmCbhmstU/mqdefault_6s.webp?du=3000&sqp=CJrr368G&rs=AOn4CLDRs-iWr7QPoQfGuv7xTdk_lPaI-Q",
     description:
-      "Let's check out the Shortest Program in JavaScript and more about the window and this keyword. Understand how the Global Execution Context is created, global object, and this keyword is created in JS. We'll also talk about what happens under the hood of the JS Engine when you execute this shortest code in the browser. ",
+      "Get ready to create dynamic and interactive websites with JavaScript. Subscribe now and embark on an exciting coding journey! ",
   },
   {
-    _id: "yLZazznWoAs",
-    title: "JavaScript in the browser!",
-    channelName: "Tanay Pratap",
+    _id: "sscX432bMZo",
+    title: "Javascript in 1 shot in Hindi | part 1",
+    channelName: 'Hitesh Choudhary',
     views: 50654,
-    uploadedOn: "Nov 28, 2020",
+    uploadedOn: "Nov 28, 2022",
     categoryName: "Javascript",
     avatar:
-      "https://yt3.ggpht.com/ytc/AKedOLQnvobEXpzHCxB1g-q2aXbRDzSaznFVHo5OdFML=s48-c-k-c0x00ffffff-no-rj",
+      " https://i.ytimg.com/an_webp/_TjtAyMkiTI/mqdefault_6s.webp?du=3000&sqp=CK7k368G&rs=AOn4CLCM4jJALJcZqoRR8zTZ0CH3fsn3Eg",
+     
     description:
-      "Welcome to neogcamp. We have learned programming and web basics in previous lessons. This time we will use both things to create a dynamic app in a web browser. You'll learn about DOM scripting i.e. JS in the browser, calling servers, and getting data from there, taking user input and showing user output, and many more things.",
+      "Javacript in one shot with Hitesh Sir",
   },
 ];

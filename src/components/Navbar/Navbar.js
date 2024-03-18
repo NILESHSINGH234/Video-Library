@@ -52,7 +52,7 @@ export const Navbar = () => {
             )}
           </button>
           <Link className="navbar-brand" to="/">
-            code <span className="brand-span">prime</span>
+            Video <span className="brand-span">Library</span>
           </Link>
           </div>
         <div className="navbar-section">
